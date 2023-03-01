@@ -1,5 +1,5 @@
-a = int(input("Input the FIRST number:\n> "))
-b = int(input("Input the SECOND number:\n> "))
+p = int(input("Input the FIRST number:\n> "))
+q = int(input("Input the SECOND number:\n> "))
 
 def GCD(a, b):
     tmp = a % b
@@ -7,10 +7,10 @@ def GCD(a, b):
         if b == 1:
             return f"GCD({a}, {b}) = PRIME."
         
-        return f"GCD({a}, {b}) = {b}"
+        return f"GCD({p}, {q}) = {b}"
     else:
         return GCD(b, tmp)
 
-print(GCD(a, b))
+print(GCD(p, q))
         
             
