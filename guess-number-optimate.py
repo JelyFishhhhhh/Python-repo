@@ -1,3 +1,4 @@
+# 30401 猜數字遊戲
 from random import random, randrange, randint
 from math import log
 from asyncio import run
