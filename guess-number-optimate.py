@@ -2,7 +2,9 @@ from random import random, randrange, randint
 from math import log
 from asyncio import run
 
-async def gen_random():
+
+# 隨機生成上限值目標書字
+async def gen_goal():
     
     global top, goal
 
@@ -18,6 +20,8 @@ async def gen_random():
 
         goal = int(goal%top)
 
+
+# 數字猜測判斷與回應
 async def guess():
 
     global times, inp, max_times
@@ -38,14 +42,16 @@ async def guess():
         return 404
 
 
+# 主程式
 if __name__ == "__main__":
     
-    global times, inp, max_times
+    run(gen_goal())
     
+    global times, inp, max_times
     times = 1
-    run(gen_random())
     max_times = int(log(top, 2))+1
 
+    # 次數內重複猜測&判斷
     while times < max_times:
 
         inp = int(input("Guess a number\n> "))
